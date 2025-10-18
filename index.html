@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The One</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #000;
+      font-family: "Lato", sans-serif;
+      overflow: hidden;
+    }
+
+    /* INTRO SCREEN */
+    .intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 1000;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards, fadeOut 2s ease forwards 7s;
+    }
+
+    .intro p {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      font-family: "Merriweather", serif;
+    }
+
+    .dot {
+      opacity: 0;
+      display: inline-block;
+      animation: dotFade 1.5s infinite;
+    }
+
+    .dot:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .dot:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+    .dot:nth-child(3) {
+      animation-delay: 1s;
+    }
+
+    @keyframes dotFade {
+      0% { opacity: 0; }
+      25% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+
+    /* MAIN CONTENT */
+    .container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem;
+      opacity: 0;
+      animation: showMain 1s ease forwards;
+      animation-delay: 9s;
+    }
+
+    @keyframes showMain {
+      to { opacity: 1; }
+    }
+
+    .content {
+      background-color: #fff;
+      color: #000;
+      border-radius: 25px;
+      max-width: 900px;
+      width: 100%;
+      padding: 3rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .top-credit {
+      text-align: center;
+      font-size: 0.85rem;
+      padding: 0.6rem 0;
+      background-color: #000;
+      color: #fff;
+      letter-spacing: 1px;
+      border-radius: 12px 12px 0 0;
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 2px solid #000;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-family: "Merriweather", serif;
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    article p {
+      text-align: justify;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-top: 1.2rem;
+    }
+
+    h2 {
+      font-family: "Merriweather", serif;
+      margin-top: 2rem;
+      border-left: 4px solid #000;
+      padding-left: 1rem;
+      font-size: 1.6rem;
+    }
+
+    blockquote {
+      border-left: 4px solid #000;
+      margin: 2rem 0;
+      padding-left: 1rem;
+      font-style: italic;
+      color: #333;
+    }
+
+    .divider {
+      width: 60%;
+      margin: 2rem auto;
+      height: 2px;
+      background-color: #000;
+    }
+
+    .signature {
+      text-align: right;
+      font-style: italic;
+      margin-top: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+      color: #000;
+      border-top: 1px solid #000;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 1.5rem;
+        border-radius: 15px;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- INTRO -->
+  <div class="intro">
+    <p>Hold on sir KG, taking you to my site
+      <span class="dot">.</span>
+      <span class="dot">.</span>
+      <span class="dot">.</span>
+    </p>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="content">
+      <div class="top-credit">Web created by Vince</div>
+
+      <header>
+        <h1>Equality in Action A Step Toward True Humanity</h1>
+        <p>By Vin Cedric V. Osorio VoidTheOne</p>
+      </header>
+
+      <article>
+        <p>
+          In a world that constantly evolves, the essence of being human remains the same: our need to belong, to be understood, and to be treated with fairness. Yet, for many, equality is still a dream — something that feels distant, even in our modern society. As students, it is our responsibility to not only study history but to learn from it, to ensure that no one is left unseen or unheard.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Seeing Beyond Ourselves</h2>
+        <p>
+          Social awareness begins when we learn to look beyond our own world. It’s about noticing others — their struggles, their hopes, their emotions — and recognizing that everyone deserves dignity. Whether it’s the classmate sitting alone, the worker striving to provide for their family, or the person judged for who they are, each of them carries a story worth understanding.
+        </p>
+
+        <blockquote>
+          “We rise by lifting others — not by standing above them, but by standing beside them.”
+        </blockquote>
+
+        <h2>The Power of Inclusivity</h2>
+        <p>
+          Inclusivity is not just a policy; it’s a mindset. It means making space for people who are often excluded, and ensuring that every voice is heard. True inclusivity happens when we listen without bias, when we welcome differences not as divisions, but as strengths. Our uniqueness is what makes humanity beautiful — it paints the world in shades far more meaningful than black and white.
+        </p>
+
+        <h2>Equity: Fairness Over Uniformity</h2>
+        <p>
+          Equity goes deeper than equality. While equality gives everyone the same tools, equity ensures everyone gets what they need to succeed. Some people start their journey from different places — with different challenges — and it’s only fair that we support them according to their needs. Fairness doesn’t mean sameness; it means understanding.
+        </p>
+
+        <h2>Our Role as the New Generation</h2>
+        <p>
+          We, the youth, have the energy and the voice to challenge injustice. We can use our creativity, our technology, and our empathy to make change visible. It starts in small ways — choosing kind words, being aware of our privileges, defending someone who’s being treated unfairly, and learning to see the humanity in everyone.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Reflection</h2>
+        <p>
+          Writing this made me reflect on how often people are judged before being understood. I realized that fairness is not something that just happens — it’s something we create, every day, in how we act and treat others. Through awareness and inclusivity, I learned that even one person can influence change. I want to be part of that change — to stand for a society that values empathy as much as intelligence, and fairness as much as success.
+        </p>
+
+        <p class="signature">
+          — Vin Cedric V. Osorio<br>
+          <strong>VoidTheOne</strong>
+        </p>
+      </article>
+
+      <footer>
+        <p>© 2025 VoidTheOne | Promoting Social Awareness, Inclusivity, and Equity</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.body.style.overflowY = "auto";
+    }, 9000);
+  </script>
+</body>
+  </html>
